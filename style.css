@@ -1,0 +1,577 @@
+/* Основные настройки */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8aaeb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+.header {
+  background-color: #f768fc;
+  color: white; /* текст белый */
+  text-align: center;
+  padding: 30px 10px;
+  -webkit-text-stroke: 3px black; /* черная обводка */
+  font-weight: 700; /* жирный текст */
+  font-size: 40px;
+}
+
+
+/* Навигация */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f38eee;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: rgb(0, 0, 0); /* текст */
+  text-decoration: none;
+  padding: 15px 25px;
+  display: block;
+  transition: background 0.3s;
+  font-size: 25px;
+}
+
+.nav a:hover {
+  background-color: rgba(0,0,0,0.2); /* легкий затемненный фон при наведении */
+  color: white; /* текст остаётся белым */
+}
+
+
+/* Главная секция: фото приветствия с текстом */
+.home-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px 20px; /* меньше сверху и снизу */
+
+  
+}
+
+.home-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: block;
+}
+
+.home-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  opacity: 0; /* изначально скрыто */
+  transition: opacity 0.4s ease; /* плавное появление */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.home-image-container:hover .home-text {
+  opacity: 1; /* появляется при наведении */
+}
+
+
+
+.home-text p {
+  color: rgb(0, 0, 0); /* текст  */
+  font-size: 35px;
+   font-weight: 700; /* делает текст жирным */
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.8); /* тень для контраста */
+  -webkit-text-stroke: 1.0px rgba(255, 255, 255, 0.8); /* обводка */
+}
+
+
+/* Секции */
+.section {
+  padding: 60px 20px;
+  background-color: #f8aaeb;
+}
+
+.section.alt {
+  background-color: #f8aaeb;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #000000;
+  text-align: center;
+  font-size: 36px; /* увеличенный размер заголовка */
+  font-weight: 700; /* можно сделать жирнее */
+}
+
+/* Блок "О блоге" с фото слева и текстом справа */
+.about-section .about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-section .about-text {
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+   font-weight: 500; /* чуть жирнее обычного */
+  line-height: 1.6; /* для лучшей читаемости */
+}
+
+.about-section .about-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.about-section .about-image:hover {
+  transform: scale(1.05);
+}
+
+/* Сетка новостей */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.news-item {
+  background-color: #f8aaeb;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-item h3 {
+  margin: 15px;
+  font-size: 18px;
+}
+
+.news-item p {
+  margin: 0 15px 15px;
+  color: #000000;
+}
+
+/* Контакты */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  font-size: 20px;
+}
+/* Контакты: только "Связаться со мной" */
+#contacts p {
+  font-size: 22px;   /* размер текста больше */
+  font-weight: 600;  /* жирнее */
+  margin-bottom: 15px; /* чуть отступ снизу */
+}
+/* Аккордеон */
+.accordion-content {
+  display: none; /* Скрыть блоки по умолчанию */
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Кнопка "Наверх" */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 24px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filters button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+/* Подвал */
+.footer {
+  background-color: #f8aaeb;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    width: 100%;
+    border-top: 1px solid #f8aaeb;
+    text-align: center;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-text {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+
+  .about-section .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section .about-text {
+    text-align: center;
+  }
+
+  .about-section .about-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    font-size: 26px;
+    padding: 20px 5px;
+  }
+
+  .nav a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .home-text p {
+    font-size: 18px;
+  }
+
+  .about-section .about-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .about-section .about-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item h3 {
+    font-size: 16px;
+  }
+
+  #contacts p, #contacts li {
+    font-size: 18px;
+  }
+}
+/* ====== Галерея ====== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Модальное окно ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== Картинка в модалке ====== */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+/* ====== Крестик закрытия ====== */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #f0a;
+}
+
+/* ====== Анимация появления ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ====== Кнопки-фильтры ====== */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.filters button {
+  background-color: #7b1fa2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.filters button:hover {
+  background-color: #9c27b0;
+  transform: scale(1.05);
+}
+
+/* ====== Галерея ====== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Модальное окно ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== Картинка в модалке ====== */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+/* ====== Крестик закрытия ====== */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #f0a;
+}
+
+/* ====== Анимация появления ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ====== Тёмная тема ====== */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-theme .header {
+  background-color: #333;
+  color: #fff;
+  -webkit-text-stroke: 0px; /* можно убрать обводку в темной теме */
+}
+
+body.dark-theme .nav {
+  background-color: #444;
+}
+
+body.dark-theme .nav a {
+  color: #fff;
+}
+
+body.dark-theme .section {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .news-item {
+  background-color: #3a3a3a;
+}
+
+body.dark-theme .about-section .about-text,
+body.dark-theme #contacts p,
+body.dark-theme #contacts li {
+  color: #fff;
+}
+
+body.dark-theme .filters button {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+/* ====== Отзывы ====== */
+.reviews-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.review-text {
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: #f0e0f8;
+  min-height: 80px;
+}
+
+#prevReview, #nextReview {
+  font-size: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #7b1fa2;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+#prevReview:hover, #nextReview:hover {
+  background-color: #9c27b0;
+}
+
+/* Тёмная тема для отзывов */
+body.dark-theme .review-text {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+#images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#images img.gallery-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#images img.gallery-img:hover {
+  transform: scale(1.05);
+}
+
