@@ -1,17 +1,18 @@
 # Лабораторная работа №6. Асинхронный JavaScript: API и хранилище
 
 ## Скриншоты работы интерактивных элементов
-1. Выбор темы (светлая/тёмная)  
-   ![Тема светлая](screenshots/theme-light.png)  
-   ![Тема тёмная](screenshots/theme-dark.png)
 
-2. Отзывы с API  
-   ![Отзывы](screenshots/reviews.png)
+<img width="1903" height="912" alt="image" src="https://github.com/user-attachments/assets/7f0bb997-03aa-45a9-9282-7b4b2dd9f2c2" />
 
-3. Динамическая галерея с изображениями  
-   ![Галерея](screenshots/gallery.png)
+<img width="1898" height="910" alt="image" src="https://github.com/user-attachments/assets/e5beddf7-a40d-42e5-8ddc-28cf3deb25c3" />
 
----
+<img width="1900" height="920" alt="image" src="https://github.com/user-attachments/assets/b7840abf-b761-4c64-888c-09445f1db882" />
+
+<img width="1900" height="909" alt="image" src="https://github.com/user-attachments/assets/d3092d21-56ab-4da7-8cd7-e5167e319ab3" />
+
+<img width="1899" height="915" alt="image" src="https://github.com/user-attachments/assets/56099d3a-7e1e-402f-90cf-cba91241b0b9" />
+
+<img width="1895" height="912" alt="image" src="https://github.com/user-attachments/assets/329a5813-5c13-4a15-859b-fc83d70b36e2" />
 
 ## Ответы на вопросы
 
